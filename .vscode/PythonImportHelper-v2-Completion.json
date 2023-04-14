@@ -1,0 +1,85 @@
+[
+    {
+        "label": "shared.typings",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "shared.typings",
+        "description": "shared.typings",
+        "detail": "shared.typings",
+        "documentation": {}
+    },
+    {
+        "label": "Configuration",
+        "importPath": "shared.typings",
+        "description": "shared.typings",
+        "isExtraImport": true,
+        "detail": "shared.typings",
+        "documentation": {}
+    },
+    {
+        "label": "Player",
+        "importPath": "shared.typings",
+        "description": "shared.typings",
+        "isExtraImport": true,
+        "detail": "shared.typings",
+        "documentation": {}
+    },
+    {
+        "label": "Coordinate",
+        "importPath": "shared.typings",
+        "description": "shared.typings",
+        "isExtraImport": true,
+        "detail": "shared.typings",
+        "documentation": {}
+    },
+    {
+        "label": "Size",
+        "importPath": "shared.typings",
+        "description": "shared.typings",
+        "isExtraImport": true,
+        "detail": "shared.typings",
+        "documentation": {}
+    },
+    {
+        "label": "pygame",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pygame",
+        "description": "pygame",
+        "detail": "pygame",
+        "documentation": {}
+    },
+    {
+        "label": "configuration",
+        "importPath": "configuration",
+        "description": "configuration",
+        "isExtraImport": true,
+        "detail": "configuration",
+        "documentation": {}
+    },
+    {
+        "label": "PlayerSetup",
+        "importPath": "features.players",
+        "description": "features.players",
+        "isExtraImport": true,
+        "detail": "features.players",
+        "documentation": {}
+    },
+    {
+        "label": "ScreenSetup",
+        "importPath": "features.screen",
+        "description": "features.screen",
+        "isExtraImport": true,
+        "detail": "features.screen",
+        "documentation": {}
+    },
+    {
+        "label": "running",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "running = True\n# def player():\n#   screen.blit(player_img, configuration['player'].position.to_tuple())\nif __name__ == '__main__':\n  player_setup = PlayerSetup(configuration[\"player\"])\n  screen_setup = ScreenSetup(\n    configuration['icon_str'], configuration[\"caption\"], configuration[\"size\"])\n  screen = screen_setup.to_surface()\n  screen_setup.setup()\n  while running:",
+        "detail": "main",
+        "documentation": {}
+    }
+]
