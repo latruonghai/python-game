@@ -4,7 +4,7 @@ from features.players import PlayerSetup
 from features.screen import ScreenSetup
 import shared.typings
 # Create new game
-pygame.init()
+
 
 # Create the  screen
 
@@ -13,7 +13,6 @@ pygame.init()
 
 # Player
 # player_img = pygame.image.load(configuration['player'].player_path)
-running = True
 
 
 # def player():
@@ -21,16 +20,30 @@ running = True
 
 
 if __name__ == '__main__':
-  player_setup = PlayerSetup(configuration["player"])
+  # Create Game
+  pygame.init()
+  running = True
+  keyEvent = None
   screen_setup = ScreenSetup(
     configuration['icon_str'], configuration["caption"], configuration["size"])
   screen = screen_setup.to_surface()
   screen_setup.setup()
+  player = configuration["player"]
+  player_setup = PlayerSetup(player)
   while running:
     screen.fill(configuration['background'])
     for event in pygame.event.get():
-      if event.type == pygame.QUIT:
-        running = False
+      match event.type:
+        case pygame.KEYDOWN:
+          keyEvent = event
+        case pygame.QUIT:
+          running = False
+        case pygame.KEYUP:
+          keyEvent = None
+        case default:
+          pass
+    if keyEvent != None:
+      player.move(event=keyEvent, screen=screen)
     player_setup.setup(screen)
     pygame.display.update()
   # pygame.

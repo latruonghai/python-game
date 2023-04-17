@@ -1,10 +1,27 @@
 [
     {
+        "label": "pygame",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pygame",
+        "description": "pygame",
+        "detail": "pygame",
+        "documentation": {}
+    },
+    {
         "label": "shared.typings",
         "kind": 6,
         "isExtraImport": true,
         "importPath": "shared.typings",
         "description": "shared.typings",
+        "detail": "shared.typings",
+        "documentation": {}
+    },
+    {
+        "label": "Player",
+        "importPath": "shared.typings",
+        "description": "shared.typings",
+        "isExtraImport": true,
         "detail": "shared.typings",
         "documentation": {}
     },
@@ -41,12 +58,19 @@
         "documentation": {}
     },
     {
-        "label": "pygame",
-        "kind": 6,
+        "label": "dataclass",
+        "importPath": "dataclasses",
+        "description": "dataclasses",
         "isExtraImport": true,
-        "importPath": "pygame",
-        "description": "pygame",
-        "detail": "pygame",
+        "detail": "dataclasses",
+        "documentation": {}
+    },
+    {
+        "label": "Event",
+        "importPath": "pygame.event",
+        "description": "pygame.event",
+        "isExtraImport": true,
+        "detail": "pygame.event",
         "documentation": {}
     },
     {
@@ -74,12 +98,12 @@
         "documentation": {}
     },
     {
-        "label": "running",
-        "kind": 5,
-        "importPath": "main",
-        "description": "main",
-        "peekOfCode": "running = True\n# def player():\n#   screen.blit(player_img, configuration['player'].position.to_tuple())\nif __name__ == '__main__':\n  player_setup = PlayerSetup(configuration[\"player\"])\n  screen_setup = ScreenSetup(\n    configuration['icon_str'], configuration[\"caption\"], configuration[\"size\"])\n  screen = screen_setup.to_surface()\n  screen_setup.setup()\n  while running:",
-        "detail": "main",
+        "label": "SpaceShip",
+        "kind": 6,
+        "importPath": "features.players.space_ship",
+        "description": "features.players.space_ship",
+        "peekOfCode": "class SpaceShip(Player):\n  player_path: str = './spaceship.png'",
+        "detail": "features.players.space_ship",
         "documentation": {}
     }
 ]
